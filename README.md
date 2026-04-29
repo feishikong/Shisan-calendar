@@ -40,10 +40,10 @@ Siji dates are formatted as
 ```
 Season-name LunarMonth꧈LunarDayʹSolarWeek
 ```
-where the lunar Month is rendered with Javanese numerals (in base 6) while the lunar day is rendered with Greek numerals 
+where the lunar Month is rendered with greek numerals while the lunar day is rendered with Javanese numerals
 the lunar month and date tracks the moon phase cycles
 
-as a result a date such as "22 March 2027" becomes `2027 Akira ꧒꧒꧒꧈ιεʹ1`
+as a result a date such as "22 March 2027" becomes `2027 Akira ιʹ꧑꧔꧈1
 
 #### Numerals reference table
 
@@ -56,6 +56,10 @@ as a result a date such as "22 March 2027" becomes `2027 Akira ꧒꧒꧒꧈ιε�
 | ꧓꧈ 	|telu   |  3  |
 | ꧔꧈ 	|papat  |  4  |
 | ꧕꧈ 	|lima   |  5  |
+| ꧖꧈ 	|nem   | 6    |
+| ꧗꧈ 	|pitu  | 7    |
+| ꧘꧈ 	|wolu  | 8    |
+| ꧙꧈ 	|sana  |  9  |
 
 ##### Greek Numerals
 |Numeral|Name   |value|
@@ -70,8 +74,6 @@ as a result a date such as "22 March 2027" becomes `2027 Akira ꧒꧒꧒꧈ιε�
 | ηʹ 	|eta 	|  8  |
 | θʹ 	|theta 	|  9  |
 | ιʹ 	|iota 	| 10  |
-| κʹ 	|kappa 	| 20  |
-| λʹ 	|lambda	| 30  |
 
 ### Astronomical Events
 Both calendars display:

@@ -171,6 +171,7 @@
             dayDiv.setAttribute('data-gregorian-date', gregorianDateStr);
             if (gregorianDateStr === todayStr) dayDiv.classList.add('today');
             calendarProcessor.lunarDay = calendarProcessor.getLunarDay(gregorianDate);
+            const lunarDayOfMonth = Array.from(calendarProcessor.lunarDay.toString()).map(digit => calendarProcessor.lunarDayOfMonth[parseInt(digit)]).join('')+'꧈';
             const lunarMonth = calendarProcessor.getLunarMonth(gregorianDate);
             const astroEvent = calendarProcessor.checkAstronomicalEvent(gregorianDate, selectedYear);
 	    const dayCell = document.createElement('div'); dayCell.className = 'day-cell';
@@ -180,7 +181,7 @@
             if(dayOfMonth%7 == 0) weekOfMonth--;
             if(dayOfMonth == 0) dayNumber.textContent = "Day 0";
             else if(dayOfMonth == 92) dayNumber.textContent = "Leap Day";
-              else dayNumber.textContent = `${lunarMonth.index}${calendarProcessor.lunarDayOfMonth[calendarProcessor.lunarDay]}${weekOfMonth}`;
+              else dayNumber.innerHTML = `${lunarMonth.index}${lunarDayOfMonth}${weekOfMonth}`;
             const { month: gMonth, day: gDay } = formatGregorianDateForDisplay(gregorianDate);
             const gregorianInfo = document.createElement('div'); gregorianInfo.className = 'gregorian-date';
             gregorianInfo.innerHTML = `${gMonth.substring(0,3)} ${gDay}`; dayCell.appendChild(gregorianInfo);
